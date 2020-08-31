@@ -1,0 +1,40 @@
+.row {
+	margin-left: 20px;
+}
+
+.row {
+	&__posters {
+		display: flex;
+		overflow-y: hidden;
+		overflow-x: scroll;
+		margin-left: 5px;
+		margin-right: 5px;
+		padding: 20px;
+
+		/* Quitamos el scrollbar para todos los nagevadores */
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	&__poster {
+		width: 100%;
+		object-fit: contain;
+		max-height: 100px;
+		margin-right: 10px;
+		transition: transform 450ms;
+
+		&:hover {
+			transform: scale(1.08);
+		}
+	}
+
+	&__posterLarge {
+		max-height: 250px;
+		transition: transform 450ms;
+
+		&:hover {
+			transform: scale(1.08);
+		}
+	}
+}
